@@ -2,8 +2,8 @@
 
 A Python bot that scrapes company data from [Avanza](https://www.avanza.se/) and ranks stocks by:  
 - 📰 News hype (AI-labeled sentiment)  
-- 💰 Profits over the last 3 months  
-- 📊 Custom trading metrics, e.g. `(company_value * value_traded_today) / avanza_owners` to see hype potential. If this is value is high then the hype potential could become high shortly
+- 💰 All Avanza labels 
+- 📊 Custom trading metrics, e.g. `hype_potential = (company_value * value_traded_today) / avanza_owners` to see hype potential. If the hype_potential is high then there could be a stock-hype shortly
 
 ---
 
@@ -28,5 +28,6 @@ A Python bot that scrapes company data from [Avanza](https://www.avanza.se/) and
 value = quote.get('totalValueTraded', None)
 market_cap_div_owners = market_cap / owners
 hype_potential = market_cap_div_owners * value
+
 
 
